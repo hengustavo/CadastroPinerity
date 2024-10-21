@@ -50,10 +50,6 @@
             <input type="checkbox" name="ativo" id="ativo" value="1">Juridica <br><br>
             <input type="checkbox" name="ativo" id="ativo" value="2">Física <br><br>
         </div>
-        <!-- tem  que arrumar<div>
-            <label for="nascimento">Data de Nascimento</label>
-            <input type="date" name="nascimento" id="nascimento">
-        </div>-->
         <div>
             <button type="submit">Cadastrar</button>
         </div>

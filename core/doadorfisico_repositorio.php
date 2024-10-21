@@ -17,11 +17,13 @@
     switch($acao){
         case 'insert':
             $dados = [
-                'NIS'           => $NIS,
+                'CPF'           => $CPF,
                 'nome'          => $nome,
-                'cpf'           => $cpf,
+                'cep'           => $cep,
+                'num'           => $num,
                 'telefone'      => $telefone,
                 'email'         => $email,
+                'dt_nasc'       => $dt_nasc
                 'folha_resumo'  => $folha_resumo,
                 'senha'         => crypt($senha, $salt)
             ];
