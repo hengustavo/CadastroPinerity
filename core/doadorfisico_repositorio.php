@@ -23,8 +23,7 @@
                 'num'           => $num,
                 'telefone'      => $telefone,
                 'email'         => $email,
-                'dt_nasc'       => $dt_nasc
-                'folha_resumo'  => $folha_resumo,
+                'dt_nasc'       => $dt_nasc,
                 'senha'         => crypt($senha, $salt)
             ];
 
@@ -41,7 +40,6 @@
                 'telefone'      => $telefone,
                 'CEP'           => $cep,
                 'num'           => $num,
-                'n_integrantes'  => $n_integrantes
             ];
 
             $criterio = [
@@ -58,7 +56,7 @@
 
         case 'login':
             $criterio = [
-                ['NIS', '=', $NIS],
+                ['cpf', '=', $NIS],
                 ['AND', 'ativo', '=', 1]
             ];
             $retorno = buscar(

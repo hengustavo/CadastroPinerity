@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pessoa</title>
+    <title>Cadastro Beneficiário</title>
     <?php
         include('menu.php');
     ?>
@@ -43,12 +43,6 @@
         <div>
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha">
-        </div>
-        <div>
-            <label for="ativo">Situação</label>
-            <input type="hidden" name="ativo" id="ativo" value="0">
-            <input type="checkbox" name="ativo" id="ativo" value="1">Juridica <br><br>
-            <input type="checkbox" name="ativo" id="ativo" value="2">Física <br><br>
         </div>
         <div>
             <button type="submit">Cadastrar</button>
