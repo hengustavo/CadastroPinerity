@@ -17,14 +17,14 @@
     switch($acao){
         case 'insert':
             $dados = [
-                'cpf'           => $cpf,
-                'nome'          => $nome,
-                'cep'           => $cep,
-                'num'           => $num,
-                'telefone'      => $telefone,
-                'email'         => $email,
-                'dt_nasc'       => $dt_nasc,
-                'senha'         => crypt($senha, $salt)
+                'cnpj'              => $cnpj,
+                'nome_fantasia'     => $nome_fantasia,
+                'nome_empresarial'  => $nome_empresarial,
+                'cep'               => $cep,
+                'num'               => $num,
+                'telefone'          => $telefone,
+                'email'             => $email,
+                'senha'             => crypt($senha, $salt)
             ];
 
             insere(
@@ -56,7 +56,7 @@
 
         case 'login':
             $criterio = [
-                ['cpf', '=', $cpf],
+                ['cnpj', '=', $cnpj],
                 ['AND', 'ativo', '=', 1]
             ];
             /*$retorno = buscar(
