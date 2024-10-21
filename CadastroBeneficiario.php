@@ -11,16 +11,34 @@
     ?>
 </head>
 <body>
-    <form action="CadastroCidadeExe.php" method="post">
+    <form action="core/beneficiario_repositorio.php" method="post">
+    <input type="hidden" name="acao" value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+    <input type="hidden" name="id" value="<?php echo $entidade['id'] ?? '' ?>">
         <fieldset>
         <legend>Cadastro de Pessoa</legend>
-            <div>
-            <label for="nome">Nome</label>
+        <div>
+            <label for="NIS">NIS:</label>
+            <input type="number" name="NIS" id="NIS">
+        </div>
+        <div>
+            <label for="nome">Nome: </label>
             <input type="text" name="nome" id="nome">
         </div>
-            <div>
+        <div>
+            <label for="cpf">CPF: </label>
+            <input type="number" name="cpf" id="cpf">
+        </div>
+        <div>
+            <label for="telefone">Telefone: </label>
+            <input type="number" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" name="telefone" id="telefone">
+        </div>
+        <div>
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email">
+        </div>
+        <div>
+            <label for="folha_resumo">Folha Resumo: </label>
+            <input type="file" name="folha_resumo" id="folha_resumo">
         </div>
         <div>
             <label for="senha">Senha</label>
@@ -32,10 +50,10 @@
             <input type="checkbox" name="ativo" id="ativo" value="1">Juridica <br><br>
             <input type="checkbox" name="ativo" id="ativo" value="2">Física <br><br>
         </div>
-        <div>
+        <!-- tem  que arrumar<div>
             <label for="nascimento">Data de Nascimento</label>
             <input type="date" name="nascimento" id="nascimento">
-        </div>
+        </div>-->
         <div>
             <button type="submit">Cadastrar</button>
         </div>
